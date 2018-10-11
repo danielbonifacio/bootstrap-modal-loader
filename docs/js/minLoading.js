@@ -12,3 +12,11 @@ var ModalLoadingController= {
     $('.modal-loading').fadeOut(250);
   }
 };
+
+$('#close').on('click', function() {
+  event.preventDefault();
+  ModalLoadingController.start();
+  setTimeout(() => {
+    ModalLoadingController.end();
+  }, 3000);
+});
